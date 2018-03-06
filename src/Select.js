@@ -787,7 +787,7 @@ class Select extends React.Component {
 			focusedIndex: options[focusedIndex].index,
 			focusedOption: options[focusedIndex].option
 		}, () => {
-			if (dir === 'previous' || dir === 'next'){
+			if (this.props.autoComplete && (dir === 'previous' || dir === 'next')){
 				this.selectFocusedOption(true);
 			}			
 		});
